@@ -1,15 +1,17 @@
-## angular2-seed
+### Angular2 and React Components
 
-A simple starter project demonstrating the basic concepts of Angular 2.
+Proof of concept for lazy loading Angular2 and React components. It's currently not possible to run React components in Angular2 as they are. The ng2ReactAdapter is a component which is able to get a React component as an input as well as its props.
 
-This branch uses [Webpack](https://webpack.github.io/) for Development. There is also a SystemJS branch available.
+## Getting started
 
-### Usage
-- Clone or fork this repository
-- Make sure you have [node.js](https://nodejs.org/) installed version 5+
-- Make sure you have NPM installed version 3+
-- `WINDOWS ONLY` run `npm install -g webpack webpack-dev-server typings typescript` to install global dependencies
-- run `npm install` to install dependencies
-- `WINDOWS ONLY` run `npm run typings-install` to install typings
-- run `npm start` to fire up dev server
-- open browser to [`http://localhost:3000`](http://localhost:3000)
+Use this project by cloning the repo.
+
+Install dependencies:
+`
+$ npm install
+`
+
+## Build & run
+`
+$ npm start
+`
