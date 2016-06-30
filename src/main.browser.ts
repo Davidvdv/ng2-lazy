@@ -20,7 +20,7 @@ const routes:Routes = [
         resolve((require('./app/components/parent/parent.routes') as any).parentRoutes);
       })
     })
-  },
+  }
 ];
 
 bootstrap(App, [
