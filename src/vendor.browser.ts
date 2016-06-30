@@ -18,3 +18,4 @@ import '@ngrx/router';
 
 // React stuff
 import 'react';
+import 'react-dom';
