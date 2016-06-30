@@ -20,5 +20,13 @@ export const parentRoutes:Routes = [
     children: [
       {path: ':id', component: DetailChild}
     ]
+  },
+  {
+    path: 'react',
+    loadComponent: () => new Promise(resolve => {
+      require.ensure([], require => {
+        resolve((require('./react/reactContainer') as any).ReactContainer);
+      })
+    })
   }
 ];
