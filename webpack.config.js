@@ -27,7 +27,8 @@ var webpackConfig = {
       { test: /\.css$/, loaders: ['to-string-loader', 'css-loader'] },
       { test: /\.html$/, loader: 'raw-loader' },
       { test: /\.json$/, loader: 'json-loader' },
-      { test: /\.tsx$/, loader: "ts-loader" }
+      { test: /\.tsx$/, loader: "ts-loader" },
+      { test: /\.jsx$/, loader: "babel" }
     ]
   }
 

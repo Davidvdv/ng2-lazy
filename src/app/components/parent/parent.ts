@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {Nested} from "./nested/nested";
 import {ng2ReactAdapter} from "./reactComponent/ng2ReactAdapter";
 import {ReactComponent} from './reactComponent/ReactComponent';
+let jsxComponent = require('./reactComponent/JSXReactComponent');
 
 @Component({
   selector: 'parent',
@@ -15,15 +16,18 @@ import {ReactComponent} from './reactComponent/ReactComponent';
     <button type="button" (click)="toggle = !toggle">Load a React Component</button>
     <nested></nested>
     <route-view></route-view>
-    <ng2-react-adapter [props]="{name: 'Solnet'}" [component]="reactComponent" *ngIf="toggle"></ng2-react-adapter>
+    <ng2-react-adapter [props]="{name: 'TSX'}" [component]="reactComponent" *ngIf="toggle"></ng2-react-adapter>
+    <ng2-react-adapter [props]="{name: 'JSX'}" [component]="jsxReactComponent" *ngIf="toggle"></ng2-react-adapter>
   `
 })
 export class Parent {
   reactComponent;
+  jsxReactComponent;
   toggle:boolean;
 
   constructor() {
     this.toggle = false;
     this.reactComponent = ReactComponent;
+    this.jsxReactComponent = jsxComponent;
   }
 }
