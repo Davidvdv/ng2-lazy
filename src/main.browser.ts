@@ -1,11 +1,11 @@
 import {bootstrap} from '@angular/platform-browser-dynamic';
-// import {enableProdMode} from '@angular/core';
 import {HTTP_PROVIDERS} from '@angular/http';
-import {provideRouter} from '@ngrx/router';
+import {provideRouter, Routes} from '@ngrx/router';
+import {provideStore} from '@ngrx/store';
+import {provideForms} from '@angular/forms';
+import {stackReducer} from './app/reducers/stackReducer';
 import {App} from './app/app';
-import {Routes} from "@ngrx/router";
-
-// enableProdMode()
+import {Stack} from "app/components/stack/stack";
 
 const routes:Routes = [
   {
@@ -20,11 +20,16 @@ const routes:Routes = [
         resolve((require('./app/components/parent/parent.routes') as any).parentRoutes);
       })
     })
+  },
+  {
+    path: '/stack', component: Stack
   }
 ];
 
 bootstrap(App, [
   HTTP_PROVIDERS,
-  provideRouter(routes)
+  provideRouter(routes),
+  provideStore({stack: stackReducer}),
+  provideForms()
 ])
   .catch(err => console.error(err));

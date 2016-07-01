@@ -5,7 +5,7 @@ import '@angular/platform-browser-dynamic';
 import '@angular/platform-browser';
 import '@angular/core';
 import '@angular/http';
-
+import '@angular/forms';
 
 // RxJS 5
 // import 'rxjs/Rx';
@@ -15,6 +15,7 @@ import '@angular/http';
 // Also see src/typings.d.ts as you also need to run `typings install x` where `x` is your module
 
 import '@ngrx/router';
+import '@ngrx/store';
 
 // React stuff
 import 'react';
