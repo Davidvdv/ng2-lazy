@@ -1,3 +1,3 @@
-/**
- * Created by dd1528 on 1/07/16.
- */
+export interface StackItem {
+  name: string;
+}

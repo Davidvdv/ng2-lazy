@@ -1,3 +1,2 @@
-/**
- * Created by dd1528 on 1/07/16.
- */
+export const ADD_STACK_ITEM = 'ADD_STACK_ITEM';
+export const CLEAR_STACK = 'CLEAR_STACK';
