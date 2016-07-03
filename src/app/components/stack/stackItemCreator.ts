@@ -7,21 +7,20 @@ import {StackItem} from "../../models/StackItem";
   <small>stackItemCreator.ts</small>
   <form (ngSubmit)="onSubmit()">
     <label for="name">Name</label>
-    <input type="text" [(ngModel)]="newStackItem.name" name="name" id="name" class="form-control" required placeholder="name">
+    <input type="text" [(ngModel)]="newStackItem.name" name="name" id="name" class="form-control" required placeholder="Name">
   </form>
   `
 })
 export class StackItemCreator {
-  submitted:boolean;
   newStackItem:StackItem;
   @Output() onCreatedStackItem = new EventEmitter();
 
   constructor() {
-    this.submitted = false;
+    this.newStackItem = { name: ''};
   }
 
   onSubmit() {
-    this.submitted = true;
     this.onCreatedStackItem.emit(this.newStackItem);
+    this.newStackItem = { name: ''};
   }
 }
