@@ -17,6 +17,6 @@ import '@angular/forms';
 import '@ngrx/router';
 import '@ngrx/store';
 
-// React stuff
-import 'react';
-import 'react-dom';
+// // React stuff
+// import 'react';
+// import 'react-dom';
