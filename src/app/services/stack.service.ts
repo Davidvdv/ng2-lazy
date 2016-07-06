@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
 import {Store} from "@ngrx/store";
 import {StackItem} from "../models/StackItem";
-import {ADD_STACK_ITEM, CLEAR_STACK} from "../actions/actions";
+import {ADD_STACK_ITEM, CLEAR_STACK, DELETE_STACK_ITEM} from "../actions/actions";
 import {Observable} from "rxjs/Rx";
 
 interface AppState {
@@ -22,5 +22,9 @@ export class StackService {
 
   clearStack() {
     this.store.dispatch({ type: CLEAR_STACK });
+  }
+
+  deleteStackItem(item) {
+    this.store.dispatch({ type: DELETE_STACK_ITEM, payload: item})
   }
 }

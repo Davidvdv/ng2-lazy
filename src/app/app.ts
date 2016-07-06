@@ -12,6 +12,8 @@ import { Component } from '@angular/core';
   
   <main>
     <route-view></route-view>
+    <route-view name="main"></route-view>
+    <route-view name="sideBlock"></route-view>
   </main>
   `,
 })

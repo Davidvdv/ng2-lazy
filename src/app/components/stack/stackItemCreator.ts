@@ -3,6 +3,7 @@ import {StackItem} from "../../models/StackItem";
 
 @Component({
   selector: 'stack-item-creator',
+  styles: [`:host { display: block; border: dashed 1px #333; padding: 10px; margin: 10px; }`],
   template: `
   <small>stackItemCreator.ts</small>
   <form (ngSubmit)="onSubmit()">

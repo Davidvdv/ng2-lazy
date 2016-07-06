@@ -5,7 +5,6 @@ import {provideStore} from '@ngrx/store';
 import {provideForms, disableDeprecatedForms} from '@angular/forms';
 import {stackReducer} from './app/reducers/stackReducer';
 import {App} from './app/app';
-import {Stack} from "app/components/stack/stack";
 
 const routes:Routes = [
   {
@@ -22,7 +21,19 @@ const routes:Routes = [
     })
   },
   {
-    path: '/stack', component: Stack
+    path: '/stack',
+    loadComponents: {
+      main: () => new Promise(resolve => {
+        require.ensure([], require => {
+          resolve((require('./app/components/stack/stack') as any).Stack);
+        })
+      }),
+      sideBlock: () => new Promise(resolve => {
+        require.ensure([], require => {
+          resolve((require('./app/components/stack/sideBlock') as any).SideBlock);
+        })
+      })
+    }
   }
 ];
 
