@@ -15,7 +15,6 @@ import '@angular/forms';
 // Also see src/typings.d.ts as you also need to run `typings install x` where `x` is your module
 
 import '@ngrx/router';
-import '@ngrx/store';
 
 // // React stuff
 // import 'react';
